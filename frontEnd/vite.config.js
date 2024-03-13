@@ -1,7 +1,22 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(({ mode }) => {
+  // making "process.env" available for vite
+  // eslint-disable-next-line no-undef
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    define: {
+      'process.env': env,
+    },
+    build: {
+      outDir: 'build',
+    },
+    server: {
+      port: 3010, 
+    },
+    plugins: [react()],
+
+  };
+});

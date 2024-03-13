@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(248,248,246);
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+#root {
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: left;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.page-element-card {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.header-card {
+  margin: 1rem;
+  padding: 1rem;
+}
