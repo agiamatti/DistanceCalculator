@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
       outDir: 'build',
     },
     server: {
-      port: 3010, 
+      port: 3010,
     },
     plugins: [react()],
 

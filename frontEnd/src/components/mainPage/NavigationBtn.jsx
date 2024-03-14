@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { CiCalculator1 } from 'react-icons/ci';
 import { GiBackwardTime } from 'react-icons/gi';
 import { PAGES } from '../../utils/constants';
+import { iconSize } from '../../../constants';
 
 function NavigationBtn() {
   const navigate = useNavigate();
@@ -46,8 +47,8 @@ function NavigationBtn() {
         </span>
         <span className='button-icon'>
           {btnMode === 0
-            ? <GiBackwardTime size={30} />
-            : <CiCalculator1 size={30} />}
+            ? <GiBackwardTime size={iconSize} />
+            : <CiCalculator1 size={iconSize} />}
         </span>
       </div>
     </div>

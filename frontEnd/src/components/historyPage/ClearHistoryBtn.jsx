@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { CiTrash } from 'react-icons/ci';
 import { apiQueriesKey } from '../../utils/constants';
 import { deleteLocalStorageItem } from '../../utils';
+import { iconSize } from '../../../constants';
 
 function ClearHistoryBtn({ updatePage }) {
   const handleClick = () => {
@@ -26,7 +27,7 @@ function ClearHistoryBtn({ updatePage }) {
           Clear history
         </span>
         <span className='button-icon'>
-          <CiTrash size={30} />
+          <CiTrash size={iconSize} />
         </span>
       </div>
     </div>

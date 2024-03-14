@@ -1,12 +1,14 @@
 h3.title {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
     margin: 0.7rem 0;
 }
-  
+
 h4.subtitle {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     margin: 0.4rem 0;
 }
 
@@ -18,11 +20,12 @@ h4.centered-message {
 }
 
 .clear-history-btn {
-    min-width: 200px;
-    background-color: rgb(49,48,48);
+    min-width: 20rem;
+    background-color: rgb(49, 48, 48);
     color: white;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     cursor: pointer;
 }
 
@@ -45,7 +48,7 @@ h4.centered-message {
 .clear-history-btn .inner-btn .button-icon {
     margin-top: 0.2rem;
     margin-bottom: -0.2rem;
-    flex:0 1 auto;
+    flex: 0 1 auto;
     vertical-align: bottom;
 }
 

@@ -1,23 +1,29 @@
 .snackbar-message {
     display: flex;
     position: fixed;
-    max-width: 300px;
-    bottom: 20px;
-    right: 20px;
+    max-width: 32rem;
+    bottom: 2rem;
+    right: 2rem;
     color: black;
-    padding: 10px;
-    background-color: rgb(255,249,237);
-    border: 1px solid rgb(243,24,16);
-    border-left: 4px solid rgb(243,24,16);
+    padding: 1rem;
+    background-color: rgb(255, 249, 237);
+    border: 1px solid rgb(243, 24, 16);
+    border-left: 4px solid rgb(243, 24, 16);
 }
 
-.snackbar-icon{
-    color: rgb(243,24,16);
+.snackbar-icon {
+    color: rgb(243, 24, 16);
     margin: 0 1rem 0 0.5rem;
 }
 
-.snackbar-title{
+.snackbar-title {
     font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.snackbar-text {
+    font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 .snackbar-close-btn {

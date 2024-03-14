@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CiCalculator1 } from 'react-icons/ci';
+import { iconSize } from '../../../constants';
 
 function CalculateDistanceBtn({ buttonClick, active }) {
   return (
@@ -20,7 +21,7 @@ function CalculateDistanceBtn({ buttonClick, active }) {
     >
       <div className='inner-btn'>
         <span className='button-text'>Calculate Distance</span>
-        <span className='button-icon'><CiCalculator1 size={30} /></span>
+        <span className='button-icon'><CiCalculator1 size={iconSize} /></span>
       </div>
     </div>
   );

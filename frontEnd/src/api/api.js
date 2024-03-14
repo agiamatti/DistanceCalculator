@@ -1,5 +1,5 @@
-// eslint-disable-next-line no-undef
-const apiServiceUrl = process.env.REACT_APP_API_URL;
+import { apiServiceUrl } from '../../constants';
+
 const headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json',

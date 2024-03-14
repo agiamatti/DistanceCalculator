@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { BiNoEntry } from 'react-icons/bi';
 import { IoIosClose } from 'react-icons/io';
 import '../../styles/Snackbar.css';
+import { iconSize } from '../../../constants';
 
 function Snackbar({ title, error }) {
   const [open, setOpen] = useState(false);
@@ -20,11 +21,11 @@ function Snackbar({ title, error }) {
       className='snackbar-message'
     >
       <div className='snackbar-icon'>
-        <BiNoEntry size={30} />
+        <BiNoEntry size={iconSize} />
       </div>
       <div>
         <div className='snackbar-title'>{title}</div>
-        {message}
+        <div className='snackbar-text'>{message}</div>
       </div>
       <div
         className='snackbar-close'
