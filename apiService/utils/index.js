@@ -1,3 +1,14 @@
+const logger = {
+  info(string) {
+    // eslint-disable-next-line no-console
+    console.log(string);
+  },
+  error(string) {
+    // eslint-disable-next-line no-console
+    console.error(string);
+  },
+};
+
 const asyncHandler = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next))
   .catch(next);
 
@@ -19,7 +30,21 @@ function getDistance(lat1, lon1, lat2, lon2) {
   return distance;
 }
 
+/**
+ * Nominatim is quite bad with suite/apt numbers so they should be stripped
+ * Ideally we would use a more complex solution like 'libpostal' for a real project
+ * @param {string} address
+ * @returns stripped address
+ */
+function stripExtraFields(address) {
+  const pattern = /\b(?:suite|apartment|unit|apt|ste|#)\s*\w*\b/ig;
+  const cleanedAddress = address.replace(pattern, '');
+  return cleanedAddress.trim();
+}
+
 module.exports = {
+  logger,
   asyncHandler,
   getDistance,
+  stripExtraFields,
 };

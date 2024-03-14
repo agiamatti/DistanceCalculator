@@ -1,3 +1,5 @@
+const { logger } = require('../utils');
+
 const getLocationFromNominatim = async (q) => {
   const format = 'json';
   const limit = 1;
@@ -12,7 +14,7 @@ const getLocationFromNominatim = async (q) => {
     // data returns an array, we only need the 0th item
     return data[0];
   } catch (error) {
-    console.error('Error querying Nominatim API:', error);
+    logger.error('Error querying Nominatim API:', error);
     throw new Error(`Failed to query Nominatim API with query ${q}, error: ${error}`);
   }
 };
