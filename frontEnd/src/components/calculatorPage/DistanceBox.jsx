@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { kmToMiles, roundToTwoDecimals } from '../utils';
+import { kmToMiles, roundToTwoDecimals } from '../../utils';
 
 function DistanceBox({ distance, selectedOption }) {
   const [milesString, setMilesString] = useState('');
@@ -23,7 +23,7 @@ function DistanceBox({ distance, selectedOption }) {
 
   return (
     <div className='distance-result-box'>
-      <label className='label-item'>Distance</label>
+      <p className='label-item'>Distance</p>
       <p className='distance-result'>
         {milesString !== '' ? `${milesString} mi` : ''}
       </p>
@@ -38,7 +38,6 @@ DistanceBox.propTypes = {
   distance: PropTypes.number,
   selectedOption: PropTypes.string,
 };
-
 
 DistanceBox.defaultProps = {
   distance: null,

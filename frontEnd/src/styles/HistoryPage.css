@@ -1,0 +1,57 @@
+h3.title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0.7rem 0;
+}
+  
+h4.subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+}
+
+h4.centered-message {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.clear-history-btn {
+    min-width: 200px;
+    background-color: rgb(49,48,48);
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.clear-history-btn:hover {
+    background-color: black;
+}
+
+.clear-history-btn .inner-btn {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear-history-btn .inner-btn .button-text {
+    flex: 1 0 auto;
+}
+
+
+.clear-history-btn .inner-btn .button-icon {
+    margin-top: 0.2rem;
+    margin-bottom: -0.2rem;
+    flex:0 1 auto;
+    vertical-align: bottom;
+}
+
+.history-section-div {
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

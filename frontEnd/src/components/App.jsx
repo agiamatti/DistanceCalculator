@@ -1,24 +1,23 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../styles/App.css';
-import CalculatorPage from './CalculatorPage';
-import HistoryPage from './HistoryPage';
-import Header from "./Header";
+import CalculatorPage from './pages/CalculatorPage';
+import HistoryPage from './pages/HistoryPage';
+import Header from './mainPage/Header';
+import { PAGES } from '../utils/constants';
 
 function App() {
-
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <div className='page-element-card'>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<CalculatorPage />} />
-            <Route path='/distance' element={<CalculatorPage />} />
-            <Route path='/history' element={<HistoryPage />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path='/' element={<CalculatorPage />} />
+          <Route path={PAGES.distance.link} element={<CalculatorPage />} />
+          <Route path={PAGES.history.link} element={<HistoryPage />} />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 

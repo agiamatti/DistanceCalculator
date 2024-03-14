@@ -1,11 +1,16 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-function RadioButtonSelector({ options, selectedOption, onOptionChange }) {
+function RadioButtonSelector({
+  label, options, selectedOption, onOptionChange,
+}) {
   return (
     <div>
+      <p className='label-item'>{label}</p>
       {options.map((option, index) => (
-        <div key={index}>
+        <div className='radio-group' key={option}>
           <input
+            className='radio-input'
             type='radio'
             id={`option-${index}`}
             name='radio-selector'
@@ -14,20 +19,20 @@ function RadioButtonSelector({ options, selectedOption, onOptionChange }) {
             onChange={() => onOptionChange(option)}
           />
           <label
-            className='label-item'
+            className='label-item radio-label'
             htmlFor={`option-${index}`}
           >
             {option}
           </label>
         </div>
       ))}
-      <p>Selected Option: {selectedOption}</p>
     </div>
   );
 }
 
 RadioButtonSelector.propTypes = {
-  options: PropTypes.array.isRequired,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectedOption: PropTypes.string.isRequired,
   onOptionChange: PropTypes.func.isRequired,
 };
