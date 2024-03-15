@@ -1,5 +1,7 @@
-const port = process.env.PORT || 5501;
+const port = process.env.PORT || '3030';
+const serverMode = process.env.SERVER_MODE;
 
-module.export = {
+module.exports = {
   port,
+  serverMode,
 };

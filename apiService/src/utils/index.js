@@ -1,13 +1,33 @@
+// simple logger object, could be expanded to create log files in the future
 const logger = {
-  info(string) {
+  info(...string) {
     // eslint-disable-next-line no-console
-    console.log(string);
+    console.log(new Date().toISOString(), ...string);
   },
-  error(string) {
+  error(...string) {
     // eslint-disable-next-line no-console
-    console.error(string);
+    console.error(new Date().toISOString(), ...string);
   },
 };
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+
+  if (Number.isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
 
 const asyncHandler = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next))
   .catch(next);
@@ -44,6 +64,7 @@ function stripExtraFields(address) {
 
 module.exports = {
   logger,
+  normalizePort,
   asyncHandler,
   getDistance,
   stripExtraFields,
