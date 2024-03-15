@@ -23,7 +23,7 @@ function Snackbar({ title, error }) {
       <div className='snackbar-icon'>
         <BiNoEntry size={iconSize} />
       </div>
-      <div>
+      <div className='snackbar-textbox'>
         <div className='snackbar-title'>{title}</div>
         <div className='snackbar-text'>{message}</div>
       </div>

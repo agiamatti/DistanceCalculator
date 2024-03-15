@@ -6,22 +6,6 @@
     grid-template-columns: 3fr 3fr 1fr 1fr;
 }
 
-@media (max-width: 1050px) and (min-width: 800px) {
-    .calculate-inputs {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .calculate-inputs {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-    }
-}
-
 .label-item {
     color: #4B4949;
     font-size: 1.2rem;
@@ -168,4 +152,24 @@
     margin-bottom: -0.2rem;
     flex: 0 1 auto;
     vertical-align: bottom;
+}
+
+@media (max-width: 1050px) and (min-width: 800px) {
+    .calculate-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .calculate-inputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
+    .calculate-distance-btn {
+        min-width: 100%;
+    }
 }

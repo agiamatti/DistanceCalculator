@@ -1,6 +1,8 @@
 .snackbar-message {
+    z-index: 100;
     display: flex;
     position: fixed;
+    width: 30rem;
     max-width: 32rem;
     bottom: 2rem;
     right: 2rem;
@@ -9,11 +11,13 @@
     background-color: rgb(255, 249, 237);
     border: 1px solid rgb(243, 24, 16);
     border-left: 4px solid rgb(243, 24, 16);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .snackbar-icon {
     color: rgb(243, 24, 16);
     margin: 0 1rem 0 0.5rem;
+    flex: 0 1 auto;
 }
 
 .snackbar-title {
@@ -26,6 +30,22 @@
     line-height: 2rem;
 }
 
+.snackbar-textbox {
+    flex: 1 0 auto;
+}
+
+.snackbar-close {
+    flex: 0 1 auto;
+}
+
 .snackbar-close-btn {
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    .snackbar-message {
+        bottom: 20rem;
+        right: 4rem;
+    }
 }
