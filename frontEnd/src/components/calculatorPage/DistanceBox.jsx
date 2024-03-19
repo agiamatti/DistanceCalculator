@@ -18,6 +18,9 @@ function DistanceBox({ distance, selectedOption }) {
         setKmString(roundToTwoDecimals(distance));
         setMilesString(roundToTwoDecimals(kmToMiles(distance)));
       }
+    } else {
+      setKmString('');
+      setMilesString('');
     }
   }, [distance, selectedOption]);
 

@@ -17,12 +17,16 @@ export default async function getDistance({ source, destination, signal }) {
     signal,
   });
 
-  const json = await response.json();
   if (!response.ok) {
-    if (json.error) {
-      throw new Error(json.error);
+    let errorMsg = `Unknown error! status: ${response.status}, statusText: ${response.statusText}`;
+    try {
+      const json = await response.json();
+      errorMsg = json.error || errorMsg;
+    } catch {
+      // do nothing; error message handled
     }
-    throw new Error(`Unknown error! status: ${response.status}`);
+    throw new Error(errorMsg);
   }
-  return json;
+
+  return response.json();
 }

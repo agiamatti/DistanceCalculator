@@ -46,8 +46,6 @@
 
 
 .distance-result {
-    /* back to Arial so it's a little more bold*/
-    font-family: Arial, sans-serif;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -58,6 +56,10 @@
     Radio button styling
 */
 
+.radio-parent {
+    margin-right: 1rem;
+}
+
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -65,7 +67,11 @@
 }
 
 .radio-input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
 .radio-label {
@@ -75,7 +81,8 @@
     /* space for the radio button */
     padding-left: 2.6rem;
     padding-top: 0.1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.7rem;
     cursor: pointer;
     color: black;
 }
@@ -85,7 +92,6 @@
     position: absolute;
     left: 0;
     top: 2px;
-    /* adjust as needed */
     width: 1.4rem;
     height: 1.4rem;
     border: 2px solid black;
@@ -97,14 +103,17 @@
 .radio-input:checked+.radio-label:after {
     content: "";
     position: absolute;
-    left: 4px;
-    top: 6px;
-    width: 1rem;
-    height: 1rem;
+    left: 5px;
+    top: 7px;
+    width: 0.8rem;
+    height: 0.8rem;
     border-radius: 50%;
     background-color: black;
 }
 
+input[type=radio]:focus+label {
+    outline: 1px dotted;
+}
 
 /*
     Calculate distance btn styling

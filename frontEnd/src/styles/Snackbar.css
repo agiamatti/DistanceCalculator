@@ -2,7 +2,7 @@
     z-index: 100;
     display: flex;
     position: fixed;
-    width: 30rem;
+    width: 26rem;
     max-width: 32rem;
     bottom: 2rem;
     right: 2rem;
@@ -46,7 +46,8 @@
 @media (max-width: 800px) {
 
     .snackbar-message {
-        bottom: 20rem;
-        right: 4rem;
+        bottom: 8rem;
+        left: 50%;
+        transform: translate(-50%);
     }
 }

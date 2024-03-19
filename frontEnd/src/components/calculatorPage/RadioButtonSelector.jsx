@@ -5,7 +5,11 @@ function RadioButtonSelector({
   label, options, selectedOption, onOptionChange,
 }) {
   return (
-    <div>
+    <div
+      className='radio-parent'
+      role='radiogroup'
+      aria-labelledby='radioGroupLabel'
+    >
       <p className='label-item'>{label}</p>
       {options.map((option, index) => (
         <div className='radio-group' key={option}>

@@ -48,7 +48,10 @@ function CalculatorPage() {
         }, apiQueriesKey);
         setError(null);
       }).catch((e) => {
+        setDistance(null);
         if (e.name !== 'AbortError') {
+          // eslint-disable-next-line no-console
+          console.error(e.message);
           setError(e);
           setActiveBtn(true);
         }
@@ -82,7 +85,14 @@ function CalculatorPage() {
         buttonClick={calculateDistance}
         active={activeBtn}
       />
-      {error ? <Snackbar title='Calculation failed' error={error} /> : null}
+      {error
+        ? (
+          <Snackbar
+            title='Calculation failed'
+            error='Something went wrong and the calculation failed.'
+            // error={error.message} // in case we want a more detailed snackbar message
+          />
+        ) : null}
     </>
   );
 }

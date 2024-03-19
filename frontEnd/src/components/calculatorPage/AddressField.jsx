@@ -4,10 +4,15 @@ import PropTypes from 'prop-types';
 function AddressField({ title, placeholderMessage, onChange }) {
   return (
     <div className='address-field'>
-      <label className='label-item' htmlFor={`address-input-${title}`}>{title}</label>
+      <label
+        className='label-item'
+        htmlFor={`address-input-${title}`}
+      >
+        {title}
+      </label>
       <input
         className='address-textfield'
-        htmlFor={`address-input-${title}`}
+        id={`address-input-${title}`}
         type='text'
         placeholder={placeholderMessage}
         onChange={(e) => onChange(e.target.value)}

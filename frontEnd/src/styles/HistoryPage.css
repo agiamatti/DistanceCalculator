@@ -6,7 +6,7 @@ h3.title {
 }
 
 h4.subtitle {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.8rem;
     margin: 0.4rem 0;
@@ -14,7 +14,7 @@ h4.subtitle {
 
 h4.centered-message {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin: 1rem;
     text-align: center;
 }

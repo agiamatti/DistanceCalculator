@@ -10,7 +10,7 @@ function Snackbar({ title, error }) {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    setMessage(error.message);
+    setMessage(error);
     setOpen(true);
   }, [error]);
 
@@ -41,9 +41,7 @@ function Snackbar({ title, error }) {
 }
 
 Snackbar.propTypes = {
-  error: PropTypes.shape({
-    message: PropTypes.string.isRequired,
-  }).isRequired,
+  error: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 
 };
