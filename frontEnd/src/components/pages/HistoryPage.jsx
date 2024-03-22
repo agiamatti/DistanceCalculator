@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/HistoryPage.css';
+import '../../styles/HistoryPage.scss';
 import Table from '../general/Table';
 import { apiQueriesKey } from '../../utils/constants';
 import ClearHistoryBtn from '../historyPage/ClearHistoryBtn';

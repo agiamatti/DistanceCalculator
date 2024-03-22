@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import '../styles/App.css';
+import '../styles/App.scss';
 import CalculatorPage from './pages/CalculatorPage';
 import HistoryPage from './pages/HistoryPage';
 import Header from './mainPage/Header';

@@ -1,12 +1,12 @@
 const { getLocationFromNominatim } = require('../external/nominatim');
-const { logger, getDistance, stripExtraFields } = require('../utils');
+const { logger, getDistance } = require('../utils');
 
 const postDistanceHandler = async (req, res) => {
   const { source, destination } = req.body;
 
   try {
-    const src = await getLocationFromNominatim(stripExtraFields(source));
-    const dest = await getLocationFromNominatim(stripExtraFields(destination));
+    const src = await getLocationFromNominatim(source);
+    const dest = await getLocationFromNominatim(destination);
     logger.info(src, dest);
     const distance = getDistance(src.lat, src.lon, dest.lat, dest.lon);
     if (distance === 0) {

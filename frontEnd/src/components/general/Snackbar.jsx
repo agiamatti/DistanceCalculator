@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { BiNoEntry } from 'react-icons/bi';
 import { IoIosClose } from 'react-icons/io';
-import '../../styles/Snackbar.css';
+import '../../styles/Snackbar.scss';
 import { iconSize } from '../../../constants';
 
 function Snackbar({ title, error }) {

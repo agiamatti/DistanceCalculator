@@ -1,10 +1,13 @@
-const { logger } = require('../utils');
+const { logger, stripExtraFields } = require('../utils');
 
 const getLocationFromNominatim = async (q) => {
   const format = 'json';
   const limit = 1;
+
+  const curedQuery = stripExtraFields(q);
   try {
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=${format}&limit=${limit}`;
+    const url = `https://nominatim.openstreetmap.org/search?q=${
+      encodeURIComponent(curedQuery)}&format=${format}&limit=${limit}`;
     const response = await fetch(url);
     const data = await response.json();
 

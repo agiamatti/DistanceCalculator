@@ -4,7 +4,7 @@ import RadioButtonSelector from '../calculatorPage/RadioButtonSelector';
 import DistanceBox from '../calculatorPage/DistanceBox';
 import CalculateDistanceBtn from '../calculatorPage/CalculateDistanceBtn';
 import getDistance from '../../api/api';
-import '../../styles/CalculatorPage.css';
+import '../../styles/CalculatorPage.scss';
 import { kmToMiles, roundToTwoDecimals, storeResultsInLocalStorage } from '../../utils';
 import { apiQueriesKey } from '../../utils/constants';
 import Snackbar from '../general/Snackbar';

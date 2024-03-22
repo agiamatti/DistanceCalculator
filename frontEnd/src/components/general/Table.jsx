@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../styles/Table.css';
+import '../../styles/Table.scss';
 
 function Table({ header, data }) {
   // TODO: add pagination for table

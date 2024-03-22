@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 .snackbar-message {
     z-index: 100;
     display: flex;
@@ -9,13 +11,13 @@
     color: black;
     padding: 1rem;
     background-color: rgb(255, 249, 237);
-    border: 1px solid rgb(243, 24, 16);
-    border-left: 4px solid rgb(243, 24, 16);
+    border: 1px solid v.$solid-red;
+    border-left: 4px solid v.$solid-red;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .snackbar-icon {
-    color: rgb(243, 24, 16);
+    color: v.$solid-red;
     margin: 0 1rem 0 0.5rem;
     flex: 0 1 auto;
 }
